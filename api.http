@@ -12,15 +12,19 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/products/72aedbcc-648b-4acb-a3f2-f24c9dad2a97
-
+GET http://localhost:3000/orders/2fbee755-c9e3-4503-acec-46ac637d1323
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwODI5MjIxMSwiZXhwIjoxNzA4MjkyMjcxfQ.2AZElurkOrqKk8A7t_QeLRslwJlJMFk3t2xori-lojM
 
 ###
 GET http://localhost:3000/orders
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwODI5MjIxMSwiZXhwIjoxNzA4MjkyMjcxfQ.2AZElurkOrqKk8A7t_QeLRslwJlJMFk3t2xori-lojM
 ###
+GET http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwODI5MjEwNCwiZXhwIjoxNzA4MjkyMTY0fQ.3QJDN9RcwCecnoG9m5HWi5Bin6Kr25ZCZ6xHh2DvNJY
+
 POST http://localhost:3000/orders
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiY2hyaXMiLCJpYXQiOjE3MDgyOTIwNDMsImV4cCI6MTcwODI5MjEwM30.kp9lQufx2Epd9T5Ayc6ZJT-s_L-QidqALm93xyuOfZE
 
 {
   "items": [
@@ -34,4 +38,13 @@ Content-Type: application/json
     }
   ],
   "card_hash": "4242424242424242"
+}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "changeme"
 }
